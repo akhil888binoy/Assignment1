@@ -1,0 +1,50 @@
+:root {
+    --background1-color : black;
+    --text1-color: white;
+}
+
+.dark {
+    --background1-color: white;
+    --text1-color: black;
+}
+
+.div1 {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7px;
+    align-items: center;
+    color: var(--background1-color);
+    gap: 10px;
+    font-weight: 600;
+}
+
+.div2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    padding: 5px;
+    background-color: var(--background1-color);
+    color: var(--text1-color);
+    font-weight: 600;
+}
+
+.btn1 {
+    padding: 5px 10px;  /* Adds space inside the button */
+    font-size: 10px;     /* Adjusts the font size */
+    font-weight: 600;    /* Makes the text bold */
+    text-align: center;
+    background: var(--background1-color);
+    color: var(--text1-color);
+    border-radius: 5px; /* Adjusts the rounding of the corners */
+    border: none;        /* Removes any default border */
+    cursor: pointer;     /* Changes the cursor to a pointer on hover */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn1:hover {
+    background: var(--text1-color);  /* Invert colors on hover */
+    color: var(--background1-color);
+}
+
+.btn1:active {
+    transform: scale(0.98);  /* Adds a subtle "press" effect */
+}

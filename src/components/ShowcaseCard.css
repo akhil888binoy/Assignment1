@@ -1,0 +1,86 @@
+:root {
+    --background-color: linear-gradient(90deg, #E5B8D9 0%, #C9B8E5 100%);
+    --text-color: #333333;
+    --heading-color : linear-gradient(90deg, #0F0F0F 0%, #333333 100%);
+    --btn-bg-color: #0F0F0F;
+    --btn-text-color: #FFFFFF;
+    --btn-hover-bg-color: #FFFFFF;
+    --btn-hover-text-color:  #0F0F0F;
+    --span-text-color : #0F0F0F;
+  }
+  
+  
+  /* Dark Theme Variables */
+  .dark {
+    --background-color: linear-gradient(135deg, #380D2C 0%, #4D173E 50%, #2B174D 100%);
+    --text-color: #CCCCCC;
+    --heading-color :linear-gradient(90deg, #FFFFFF 0%, #CCCCCC 100%);
+    --btn-bg-color: #FFFFFF;
+    --btn-text-color: #0F0F0F;
+    --btn-hover-bg-color: #0F0F0F;
+    --btn-hover-text-color: #FFFFFF;
+    --span-text-color : #FFFFFF;
+  }
+
+.showcase-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.showcase-card {
+    background: var(--background-color);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(0.25);
+    animation: growBounce 800ms ease-out forwards;
+}
+
+.showcase-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background: var(--heading-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.showcase-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var( --text-color);
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--btn-hover-text-color);
+}
+
+/* Bouncy grow effect for the card */
+@keyframes growBounce {
+    0% {
+        transform: scale(0.25);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

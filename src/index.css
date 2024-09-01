@@ -1,0 +1,18 @@
+/* src/index.css */
+:root {
+  --background-color-light: #ffffff;
+  --text-color-light: #000000;
+
+  --background-color-dark: #0F0F0F;
+  --text-color-dark: #ffffff;
+}
+
+body.light {
+  background-color: var(--background-color-light);
+  
+}
+
+body.dark {
+  background-color: var(--background-color-dark);
+ 
+}

@@ -1,0 +1,107 @@
+/* Base Blob Styling */
+.blob {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    filter: blur(100px);
+    
+    z-index: -1;
+    background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 60%);
+}
+
+/* Gradient for Blob 1 */
+.blob-1 {
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba(119, 43, 242, 0.4), rgba(209, 111, 255, 0.4));
+    opacity: 0.8;
+    animation: pulse-blob-1 6s ease-in-out infinite alternate;
+}
+
+/* Gradient for Blob 2 */
+.blob-2 {
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(135deg, rgba(255, 0, 184, 0.4), rgba(255, 122, 174, 0.4));
+    opacity: 0.8;
+    animation: pulse-blob-2 6s ease-in-out infinite alternate;
+}
+
+/* Glowing effect animation */
+@keyframes shineBlob1 {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 0, 184, 0.3), 0 0 40px rgba(255, 122, 174, 0.2), 0 0 60px rgba(255, 122, 174, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 0, 184, 0.4), 0 0 60px rgba(255, 122, 174, 0.3), 0 0 80px rgba(255, 122, 174, 0.2);
+    }
+}
+
+@keyframes shineBlob2 {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(119, 43, 242, 0.3), 0 0 40px rgba(209, 111, 255, 0.2), 0 0 60px rgba(209, 111, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(119, 43, 242, 0.4), 0 0 60px rgba(209, 111, 255, 0.3), 0 0 80px rgba(209, 111, 255, 0.2);
+    }
+}
+
+.animate-blob-1 {
+    animation: moveBlob1 12000ms ease-in-out infinite, shineBlob1 3000ms ease-in-out infinite;
+}
+
+.animate-blob-2 {
+    animation: moveBlob2 12000ms ease-in-out infinite, shineBlob2 3000ms ease-in-out infinite;
+}
+
+/* Blob Movement Animations */
+@keyframes moveBlob1 {
+    0%, 100% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: calc(100vw - 380px);
+    }
+    50% {
+        top: calc(100vh - 340px);
+        left: calc(100vw - 380px);
+    }
+    75% {
+        top: calc(100vh - 340px);
+        left: 0;
+    }
+}
+
+@keyframes moveBlob2 {
+    0%, 100% {
+        bottom: 0;
+        right: 0;
+    }
+    25% {
+        bottom: 0;
+        right: calc(100vw - 380px);
+    }
+    50% {
+        bottom: calc(100vh - 340px);
+        right: calc(100vw - 380px);
+    }
+    75% {
+        bottom: calc(100vh - 340px);
+        right: 0;
+    }
+}
+
+/* Blur Effect for Different Screen Sizes */
+@media (min-width: 768px) {
+    .blob {
+        filter: blur(70px);
+    }
+}
+
+@media (max-width: 767px) {
+    .blob {
+        filter: blur(40px);
+    }
+}
